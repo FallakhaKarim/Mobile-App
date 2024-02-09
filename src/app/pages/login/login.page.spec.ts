@@ -3,6 +3,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { LoginPage } from './login.page';
 import { Router } from '@angular/router';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('LoaderPage', () => {
   let component: LoginPage;
@@ -12,13 +14,21 @@ describe('LoaderPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LoginPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        ReactiveFormsModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoginPage);
     router = TestBed.get(Router);
     component = fixture.componentInstance;
   }));
+
+  it('should create a form on init', () => {
+    component.ngOnInit();
+    expect(component.form).not.toBeUndefined();
+  })
 
   it('shoud go to home page on login', () =>{
     spyOn(router,'navigate');
