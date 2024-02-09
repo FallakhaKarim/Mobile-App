@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Please insert image</ion-label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*">
+  </ion-item>
+</ion-content>

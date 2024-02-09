@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Contact</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-input type="text" label="First Name" labelPlacement="floating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" label="Last Name" labelPlacement="floating"></ion-input>
+      </ion-item>
+
+      <ion-item (click)="toggleDateOfBirth()">
+        <ion-label>Date of Birth</ion-label>
+        <ion-datetime 
+          *ngIf="showDatePicker" 
+          display-format="DD/MM/YYYY" 
+          placeholder="Select your date of birth"
+        ></ion-datetime>
+      </ion-item>
+      
+      
+      
+      <ion-item>
+        <ion-input type="email" label="Email" labelPlacement="floating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" label="Password" labelPlacement="floating"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="password" label="Confirm Password" labelPlacement="floating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="tel" label="Phone Number" labelPlacement="floating"></ion-input>
+      </ion-item>
+
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Address Information</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-input type="text" label="City" labelPlacement="floating"></ion-input>
+      </ion-item>
+      
+
+      <ion-item>
+        <ion-input type="tel" label="Street Name" labelPlacement="floating"></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-button size="full" (click)="register()">
+    Register
+  </ion-button> 
+  
+</ion-content>

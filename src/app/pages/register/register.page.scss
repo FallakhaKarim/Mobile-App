@@ -1,0 +1,12 @@
+ion-button{
+    margin: 10px;
+}
+
+ion-datetime {
+    width: 100%; /* Set the initial width, adjust as needed */
+  }
+  
+  ion-item.active ion-datetime {
+    width: 100%; /* Set the expanded width, adjust as needed */
+  }
+  

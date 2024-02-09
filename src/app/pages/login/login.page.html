@@ -1,0 +1,30 @@
+<ion-content>
+
+  <ion-button (click)="toggleLoginRole()" class="top-right-button">
+    {{ loginRole === 'doctor' ? 'Log in as Doctor' : 'Log in as Patient' }}
+  </ion-button>
+
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header class="label-welcome">
+        <ion-card-title>Welcome</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-input type="email" label="Email" labelPlacement="floating" placeholder="Enter email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" label="Password" labelPlacement="floating" placeholder="Enter Password"></ion-input>
+        </ion-item>
+
+
+        
+        <ion-button color="dark" fill="clear" size="full">Forgot Email/Password</ion-button>
+        <ion-button size="full" (click)="login()">Login</ion-button>
+        <ion-button size="full" fill="clear" (click)="register()">Register</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-img src="https://www.hdf.usj.edu.lb/sites/default/files/logo/hdf-logo-en.png" class="bottom-right-image"></ion-img>
+</ion-content>
